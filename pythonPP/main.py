@@ -2,8 +2,9 @@
 Molecular dynamics internship program
 Created by: Andre
 """
-print("Hello, Which program are we running today?")
 from MDFile import File
+print("Hello, Which program are we running today?")
+
 
 ACTIVE = True
 while ACTIVE:
@@ -20,14 +21,14 @@ while ACTIVE:
     elif int(user_input.strip('.')) == 1:
 
         dat_file_in = input("Write file direction\n")
-        File dat_file(dat_file_in)
+        dat_file = File(dat_file_in)
         print(f"You have selected {dat_file_in} file")
         user_input = input("Select an option:\n"
                            "1. Only read (results on the screen)\n"
                            "2. Only write (results in the output file)\n"
                            "3. Both\n")
         if int(user_input.strip('.')) == 1:
-            dat_file.read()
+            dat_file.read
             user_input = ""
         elif int(user_input.strip('.')) == 2:
             file_name = input("Write a name for generated output file\n")
@@ -35,6 +36,13 @@ while ACTIVE:
             user_input = ""
         elif int(user_input.strip('.')) == 3:
             file_name = input("Write a name for generated output file\n")
-            dat_file.read()
+            dat_file.read
             dat_file.write(file_name)
             user_input = ""
+        else:
+            print("You didn't select an option")
+
+    elif int(user_input.strip('.')) == 2:
+        dat_file_in = input("Write file direction\n")
+        dat_file = File(dat_file_in)
+        print(f"You have selected {dat_file_in} file")
